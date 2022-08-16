@@ -3,9 +3,10 @@ import * as React from "React";
 type CardProps = {
   title: string;
   url: string;
+  photo: string;
 };
 
-const Card = ({ title, url }: CardProps) => {
+const Card = ({ title, url, photo }: CardProps) => {
   return (
     <>
       <div className="centered-container">
@@ -13,16 +14,13 @@ const Card = ({ title, url }: CardProps) => {
           <div className="p-5">
             <a href="#">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                This image below was fetched from an external API at build time.
-                If you want to refresh it, you MUST rebuild.
               </h5>
             </a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              {title}
             </p>
           </div>
           <div>
-            <img className="rounded-t-lg" src={url} alt="" />
+            <img className="w-[600px] h-[480px]" src={photo} alt="" />
           </div>
         </div>
       </div>

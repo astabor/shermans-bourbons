@@ -1,0 +1,12 @@
+{
+    "$id": "site-entity",
+    "filter": {
+      "entityIds": ["shermans-bourbons-site"]
+    },
+    "source": "knowledgeGraph",
+    "fields": ["name","richTextDescription","primaryPhoto","logo","c_header"], 
+    "localization": {
+      "locales": ["en"],
+      "primary": false
+    }
+  }

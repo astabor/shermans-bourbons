@@ -43,11 +43,11 @@ export const config: TemplateConfig = {
       "name",
       "address",
       "mainPhone",
-      "description",
       "hours",
       "slug",
       "geocodedCoordinate",
       "services",
+      "featuredMessage",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -130,6 +130,7 @@ const Location: Template<TemplateRenderProps> = ({
     mainPhone,
     geocodedCoordinate,
     services,
+    featuredMessage,
   } = document;
 
   return (
@@ -137,15 +138,15 @@ const Location: Template<TemplateRenderProps> = ({
       <PageLayout _site={_site}>
         <Banner name={name} address={address} openTime={openTime}>
           <div className="bg-white h-40 w-1/5 flex items-center justify-center text-center flex-col space-y-4 rounded-lg">
-            <div className="text-black text-base">Visit Us Today!</div>
+            <div className="text-black text-base">Drink With Us Today!</div>
             <Cta
               buttonText="Get Directions"
-              url="http://google.com"
+              url="http://yext.com"
               style="primary-cta"
             />
           </div>
         </Banner>
-        <div className="centered-container">
+        <div className="centered-container bg-grey-500">
           <div className="section">
             <div className="grid grid-cols-3 gap-x-10 gap-y-10">
               <div className="bg-gray-100 p-5 space-y-12">
@@ -154,6 +155,9 @@ const Location: Template<TemplateRenderProps> = ({
               </div>
               <div className="col-span-2 pt-5 space-y-10">
                 <div>
+                <h1>
+                {featuredMessage.description}
+                </h1>
                   {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
                 </div>
                 {geocodedCoordinate && (
