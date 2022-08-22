@@ -138,7 +138,7 @@ const Location: Template<TemplateRenderProps> = ({
       <PageLayout _site={_site}>
         <Banner name={name} address={address} openTime={openTime}>
           <div className="bg-white h-40 w-1/5 flex items-center justify-center text-center flex-col space-y-4 rounded-lg">
-            <div className="text-black text-base">Drink With Us Today!</div>
+            <div className="text-black text-base">Come Drink With Us Today!</div>
             <Cta
               buttonText="Get Directions"
               url="http://yext.com"
